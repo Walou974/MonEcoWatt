@@ -3,11 +3,14 @@
 ##CE SCRIPT A POUR BUT DE FACILITER LE TRAITEMENT DES DONNEES PAR L'APPLICATION ANDROID ET L'ANALYSE DE LEUR CONTENU##
 
 ##Relation avec la cible - Déclaration de l'entrée
-TARGET="http://isis.unice.fr/~ga103969/ext/saejava/" #URL de la page web
-OUTPUT=".temp.html" #Nom du fichier temporaire
+
+#	TARGET="http://isis.unice.fr/~ga103969/ext/saejava/" #URL de la page web
+
+OUTPUT="index.php" #Nom du fichier temporaire
 
 ##Téléchargement de la cible avec curl
-curl $TARGET --output $OUTPUT 2>/dev/null 
+
+#	curl $TARGET --output $OUTPUT 2>/dev/null
 
 ##Mise en forme temporaire pour détecter le début (S) et la fin (E) du document
 cat $OUTPUT \
@@ -18,7 +21,7 @@ export E=$(cat .tmp | grep -nE "}')" | cut -d ':' -f 1) #End
 ##Extraction
 cat .tmp \
 | sed -n "${S},${E}p" \
-| tr "\n" " " > .tmp2  
+| tr "\n" " " > .tmp2
 
 ##Déduction du nom du document, extraction du pattern permettant de distinguer données et métadonnées
 export TITLE=$(grep -o '[0-9]*' .tmp2 | xargs | awk '{ print $1}') #Nom du document (numéro de génération)
@@ -34,10 +37,10 @@ cat .tmp2 \
 | awk -F "]" '{ print $1 }' \
 | sed s/' '/''/g \
 | awk -F ",\"$REGEX_2\"," '{ print $1 }' \
-| sed 's/"Pasd\\u2019alerte."/"Pas d'\''alerte."/g' > $TITLE.sae 
+| sed 's/"Pasd\\u2019alerte."/"Pas d'\''alerte."/g' > $TITLE.sae
 
 ##Initialisation du filtrage
-mkdir .dump #Création du dossier recueillant les dumps .csv et .json
+mkdir .dump 2> /dev/null #Création du dossier recueillant les dumps .csv et .json
 cd $_ #Déplacement dans ce dernier pour la suite des opérations
 
 ##Déclaration des fichiers
@@ -56,4 +59,4 @@ fi
 done < ../$INPUT
 
 cd ..
-rm ./.tmp* $OUTPUT
+rm ./.tmp* #	$OUTPUT
