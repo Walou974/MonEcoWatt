@@ -10,14 +10,14 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="146dp"
-        android:layout_height="136dp"
+        android:layout_width="209dp"
+        android:layout_height="179dp"
         android:contentDescription="@string/image_de_d_marrage"
         app:layout_constraintBottom_toTopOf="@+id/progressBar"
         app:layout_constraintEnd_toEndOf="@+id/textView3"
         app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_ecowatt_onboarding"
+        app:srcCompat="@mipmap/launcher_logo_ecowatt"
         tools:ignore="ImageContrastCheck" />
 
     <ProgressBar
@@ -25,12 +25,12 @@
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="152dp"
+        android:layout_marginBottom="148dp"
         android:indeterminate="false"
         android:progressTint="@color/vert_clair"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -39,6 +39,7 @@
         android:layout_height="wrap_content"
         android:text="@string/chargement"
         android:textAllCaps="true"
+        android:fontFamily="@font/police_bizarre"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#191970"
         android:textColorHint="#FFFFFF"
@@ -57,7 +58,9 @@
         android:text="@string/bienvenu"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:fontFamily="@font/police_bizarre"
         android:textColor="#191970"
+        android:gravity="center_horizontal"
         android:textColorHint="#FFFFFF"
         android:textFontWeight="@android:integer/config_longAnimTime"
         android:textIsSelectable="true"
