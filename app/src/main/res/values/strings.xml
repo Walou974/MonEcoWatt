@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">MonEcoWatt</string>
     <string name="test">TEST</string>
-    <string name="bienvenu">Bienvenue sur MonEcoWatt !!!</string>
-    <string name="chargement">Chargement…</string>
+    <string name="bienvenu">Bienvenue sur MonEcowatt, \n\n Votre météo de l\'éléctricité en ligne</string>
+    <string name="chargement">Chargement de l\'application...</string>
     <string name="image_de_d_marrage">Image de démarrage</string>
     <string name="menu">Menu</string>
     <string name="contenu_principal">Contenu principal</string>
