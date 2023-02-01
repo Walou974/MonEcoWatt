@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MonEcoWatt</string>
+    <string name="test">TEST</string>
+    <string name="bienvenu">Bienvenue sur MonEcoWatt !!!</string>
+    <string name="chargement">Chargement…</string>
+    <string name="image_de_d_marrage">Image de démarrage</string>
+    <string name="menu">Menu</string>
+    <string name="contenu_principal">Contenu principal</string>
+    <string name="bnm_first_item">Principal</string>
+    <string name="bnm_second_item">Region</string>
+    <string name="bnm_third_item">Historique</string>
+    <string name="bnm_fourth_item">A propos</string>
+</resources>
