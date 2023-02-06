@@ -13,7 +13,7 @@
         android:theme="@style/Theme.MonEcoWatt"
         tools:targetApi="31">
         <activity
-            android:name=".test"
+            android:name="com.example.monecowatt.ActivityChargement"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,32 +25,29 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".chargement"
+        <!--Add Other activities like this-->
+        <activity android:name="com.example.monecowatt.MainActivity"
             android:exported="true">
+            <!--Default Intent Filter-->
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
-
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
         </activity>
-        <activity
-            android:name=".MainActivity"
+        <activity android:name="com.example.monecowatt.Ecogestes"
             android:exported="true">
+            <!--Default Intent Filter-->
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
-
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
         </activity>
+        <activity android:name="com.example.monecowatt.Propos"
+            android:exported="true">
+            <!--Default Intent Filter-->
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
