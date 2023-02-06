@@ -5,23 +5,17 @@
         android:id="@+id/miPrinc"
         android:title="@string/bnm_first_item"
         android:contentDescription="@string/bnm_first_item"
-        android:icon="@drawable/ic_compact" />
+        android:icon="@drawable/ic_eletrik" />
 
     <item
-        android:id="@+id/miMap"
+        android:id="@+id/miEcogestes"
         android:title="@string/bnm_second_item"
         android:contentDescription="@string/bnm_second_item"
-        android:icon="@drawable/ic_map" />
-
-    <item
-        android:id="@+id/miHistorique"
-        android:title="@string/bnm_third_item"
-        android:contentDescription="@string/bnm_third_item"
-        android:icon="@drawable/ic_calendar" />
+        android:icon="@drawable/ic_eco_gest" />
 
     <item
         android:id="@+id/miPropos"
-        android:title="@string/bnm_fourth_item"
-        android:contentDescription="@string/bnm_fourth_item"
-        android:icon="@drawable/ic_info" />
+        android:contentDescription="@string/bnm_third_item"
+        android:icon="@drawable/ic_info"
+        android:title="@string/bnm_third_item" />
 </menu>
