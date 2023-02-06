@@ -1,12 +1,15 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.lang.reflect.Array;
 import java.net.URL;
+import java.net.http.HttpRequest;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Main {
+public class MainApp {
     public static void main(String[] args) {
-        String host = "http://isis.unice.fr/~ga103969/ext/saejava";
+        String host = "http://isis.unice.fr/~ga103969/ext/saejava/.dump/0_L";
         HashMap<String, StringBuilder> data = new HashMap<>();
 
         for (int i = 0; i <= 3; i++) {
@@ -41,13 +44,14 @@ public class Main {
                         hData.append(hInputLine).append("\n");
                     }
                     hIn.close();
-                    data.put(folder + "/" + j + "h", hData);
+                    System.out.println(data.put(folder + "/" + j + "h", hData));
+                    
                 }
             } catch (IOException e) {
                 System.out.println("Erreur lors de la lecture de l'URL " + folder + " : " + e.getMessage());
             }
         }
-        System.out.println(data);
+        //System.out.println(data);
         // Ajout de la lecture du dossier tipss
         String tipsFolder = "tips";
         try {
@@ -65,4 +69,5 @@ public class Main {
         }
         System.out.println(data);
     }
+ 
 }
