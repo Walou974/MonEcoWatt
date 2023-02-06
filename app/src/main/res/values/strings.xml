@@ -1,16 +1,15 @@
 <resources>
     <string name="app_name">MonEcoWatt</string>
     <string name="test">TEST</string>
-    <string name="bienvenu">Bienvenue sur MonEcowatt, \n\n Votre météo de l\'éléctricité en ligne</string>
-    <string name="chargement">Chargement de l\'application...</string>
+    <string name="bienvenu">Bienvenue sur MonEcoWatt !!!</string>
+    <string name="chargement">Chargement…</string>
     <string name="image_de_d_marrage">Image de démarrage</string>
     <string name="menu">Menu</string>
     <string name="contenu_principal">Contenu principal</string>
     <string name="bnm_first_item">Principal</string>
-    <string name="bnm_second_item">Region</string>
-    <string name="bnm_third_item">Historique</string>
-    <string name="bnm_fourth_item">A propos</string>
-     <string name="prensentation_ecogestes"> Pour une consommation éléctrique responsable : \n Économisons l\’électricité lors des périodes de forte consommation grâce aux <b>ECOGESTES</b>  </string>
+    <string name="bnm_second_item">Les éco-gestes</string>
+    <string name="bnm_third_item">A propos</string>
+    <string name="prensentation_ecogestes"> Pour une consommation éléctrique responsable : \n Économisons l\’électricité lors des périodes de forte consommation grâce aux <b>ECOGESTES</b>  </string>
     <string name="Eco1">Agir en cas de signal orange ou rouge :</string>
     <string name="Eco1_1">1) Réduire autant que possible la température du chauffage</string>
     <string name="Eco1_2">2) Décaler certains usages domestiques (lave-vaisselle, machine à laver, etc.)</string>
@@ -32,6 +31,6 @@
     <string name="Eco3_1">1) Baisser la température du chauffage à 19°C</string>
     <string name="Eco3_2">2) Généraliser l\'éclairage LED</string>
     <string name="Eco3_3">3) Couvrir les casseroles et les poêles pour raccourcir le temps de cuisson</string>
-    <string name="Eco3_4">4) Réduire l\'utilisation de l'eau chaude</string>
-    <string name="Eco3_5">5) Régler la température de production d’eau chaude (au minimum à 55°C)</string>
+    <string name="Eco3_4">4) Réduire l\'utilisation de l\'eau chaude</string>
+    <string name="Eco3_5">5) Régler la température de production d\'eau chaude (au minimum à 55°C)</string>
 </resources>

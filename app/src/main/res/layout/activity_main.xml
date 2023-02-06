@@ -14,7 +14,7 @@
             android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/vert_clair"
+            android:background="@color/header_backg"
             android:orientation="horizontal"
             android:paddingHorizontal="20dp"
             android:paddingVertical="10dp"
@@ -25,16 +25,17 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerVertical="true"
-                android:src="@drawable/logo_ecowatt_onboarding" />
+                android:src="@mipmap/launcher_logo_ecowatt" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:contentDescription="More button"
-                android:src="@drawable/ic_add" />
+                android:src="@drawable/ic_add"
+                />
 
 
         </RelativeLayout>
@@ -46,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@color/blanc_casse">
+            android:background="@color/scroll_backg">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -56,52 +57,144 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="10dp">
-
-                    <ImageView
-                        android:id="@+id/imageView2"
+                    android:layout_marginVertical="5sp"
+                    app:cardBackgroundColor="@color/fond"
+                    app:cardCornerRadius="15sp">
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/logo_ecowatt_onboarding" />
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:translationZ="10dp">
 
+                        <TextView
+                            android:id="@+id/todayTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text"
+                            android:text=""
+                            android:textSize="35sp"
+                            android:textAlignment="center"/>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <org.eazegraph.lib.charts.PieChart
+                                android:id="@+id/todayPiechart"
+                                android:layout_width="match_parent"
+                                android:layout_height="300sp"
+                                app:egInnerPaddingColor="@color/blanc_casse"
+                                android:padding="6sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_centerInParent="true"
+                                android:layout_height="190sp"
+                                android:src="@drawable/test_for_mon_ecowatt" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="10dp">
-
-                    <ImageView
-                        android:id="@+id/imageView"
+                    android:layout_marginVertical="5sp"
+                    app:cardBackgroundColor="@color/fond"
+                    app:cardCornerRadius="15sp">
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/logo_ecowatt_onboarding" />
-                </androidx.cardview.widget.CardView>
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:translationZ="10dp">
 
+                        <TextView
+                            android:id="@+id/tommorowTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text"
+                            android:text=""
+                            android:textSize="35sp"
+                            android:textAlignment="center"/>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <org.eazegraph.lib.charts.PieChart
+                                android:id="@+id/tommorowPiechart"
+                                android:layout_width="match_parent"
+                                android:layout_height="300sp"
+                                app:egInnerValueColor="@color/blanc_casse"
+                                android:padding="6sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="190sp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/test_for_mon_ecowatt" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="10dp">
-
-                    <ImageView
-                        android:id="@+id/imageView3"
+                    app:cardBackgroundColor="@color/fond"
+                    android:layout_marginVertical="5sp"
+                    app:cardCornerRadius="15sp">
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/logo_ecowatt_onboarding" />
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
+                        <TextView
+                            android:id="@+id/afterTommorowTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text"
+                            android:text=""
+                            android:textSize="35sp"
+                            android:textAlignment="center"/>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <org.eazegraph.lib.charts.PieChart
+                                android:id="@+id/afterTommorowPiechart"
+                                android:layout_width="match_parent"
+                                android:layout_height="300sp"
+                                app:egInnerValueColor="@color/blanc_casse"
+                                android:padding="6sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_centerInParent="true"
+                                android:layout_height="190sp"
+                                android:src="@drawable/test_for_mon_ecowatt" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
+
             </LinearLayout>
 
         </ScrollView>
 
-
-
-
-
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bnmView"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="60sp"
+            android:background="@color/header_backg"
+            app:itemTextColor="@color/vert_clair"
+            app:itemRippleColor="@color/blanc_casse"
+            app:itemIconTint="@color/vert_clair"
             app:menu="@menu/bottomnavigationmenu"
             />
 

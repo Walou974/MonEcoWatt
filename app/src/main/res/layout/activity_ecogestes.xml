@@ -14,7 +14,7 @@
             android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/vert_clair"
+            android:background="@color/header_backg"
             android:orientation="horizontal"
             android:paddingHorizontal="20dp"
             android:paddingVertical="10dp"
@@ -25,7 +25,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerVertical="true"
-                android:src="@drawable/logo_ecowatt_onboarding" />
+                android:src="@mipmap/launcher_logo_ecowatt" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab"
@@ -46,7 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@color/blanc_casse">
+            android:background="@color/scroll_backg">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -197,57 +197,57 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Eco2"
-                        android:fontFamily="@font/police_bizarre"
-                        android:textColor="#191970"
-                        android:textAlignment="center"
-                        android:textSize="20dp"/>
-
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-
-
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Eco2"
                             android:fontFamily="@font/police_bizarre"
-                            android:textColor="#000000"
-                            android:text="@string/Eco2_1"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:fontFamily="@font/police_bizarre"
-                            android:textColor="#000000"
-                            android:text="@string/Eco2_2"/>
+                            android:textColor="#191970"
+                            android:textAlignment="center"
+                            android:textSize="20dp"/>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:fontFamily="@font/police_bizarre"
-                            android:textColor="#000000"
-                            android:text="@string/Eco2_3"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:fontFamily="@font/police_bizarre"
-                            android:textColor="#000000"
-                            android:text="@string/Eco2_4"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:fontFamily="@font/police_bizarre"
-                            android:textColor="#000000"
-                            android:text="@string/Eco2_5"/>
 
-                    </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/police_bizarre"
+                                android:textColor="#000000"
+                                android:text="@string/Eco2_1"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/police_bizarre"
+                                android:textColor="#000000"
+                                android:text="@string/Eco2_2"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/police_bizarre"
+                                android:textColor="#000000"
+                                android:text="@string/Eco2_3"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/police_bizarre"
+                                android:textColor="#000000"
+                                android:text="@string/Eco2_4"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/police_bizarre"
+                                android:textColor="#000000"
+                                android:text="@string/Eco2_5"/>
+
+                        </LinearLayout>
                     </LinearLayout>
 
 
@@ -267,63 +267,63 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="10dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Eco3"
-                        android:fontFamily="@font/police_bizarre"
-                        android:textColor="#191970"
-                        android:textAlignment="center"
-                        android:textSize="20dp"/>
-
-
-
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Eco3"
+                            android:fontFamily="@font/police_bizarre"
+                            android:textColor="#191970"
+                            android:textAlignment="center"
+                            android:textSize="20dp"/>
 
 
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:fontFamily="@font/police_bizarre"
-                            android:textColor="#000000"
-                            android:text="@string/Eco3_1"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:fontFamily="@font/police_bizarre"
-                            android:textColor="#000000"
-                            android:text="@string/Eco3_2"/>
 
-                        <TextView
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:fontFamily="@font/police_bizarre"
-                            android:textColor="#000000"
-                            android:text="@string/Eco3_3"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:fontFamily="@font/police_bizarre"
-                            android:textColor="#000000"
-                            android:text="@string/Eco3_4"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:fontFamily="@font/police_bizarre"
-                            android:textColor="#000000"
-                            android:text="@string/Eco3_5"/>
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/police_bizarre"
+                                android:textColor="#000000"
+                                android:text="@string/Eco3_1"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/police_bizarre"
+                                android:textColor="#000000"
+                                android:text="@string/Eco3_2"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/police_bizarre"
+                                android:textColor="#000000"
+                                android:text="@string/Eco3_3"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/police_bizarre"
+                                android:textColor="#000000"
+                                android:text="@string/Eco3_4"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/police_bizarre"
+                                android:textColor="#000000"
+                                android:text="@string/Eco3_5"/>
+
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -348,9 +348,12 @@
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bnmView"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            app:menu="@menu/bottomnavigationmenu"
-            />
+            android:layout_height="60sp"
+            android:background="@color/header_backg"
+            app:itemTextColor="@color/vert_clair"
+            app:itemRippleColor="@color/blanc_casse"
+            app:itemIconTint="@color/vert_clair"
+            app:menu="@menu/bottomnavigationmenu"/>
 
     </LinearLayout>
 

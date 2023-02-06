@@ -4,7 +4,7 @@
         android:id="@+id/page_1"
         android:enabled="true"
         android:icon="@drawable/ic_info"
-        android:title="@string/bnm_fourth_item"/>
+        android:title="@string/bnm_third_item"/>
     <item
         android:id="@+id/page_2"
         android:enabled="true"
