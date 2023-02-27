@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="vert_clair">#82D9A0</color>
+    <color name="vert_fonce">#2e5154</color>
+    <color name="notif">#191970</color>
+    <color name="rouge_al">#fe1b00</color>
+    <color name="orange_al">#ff8c00</color>
+    <color name="jaune_al">#fdee00</color>
+    <color name="vert_al">#31CB00</color>
+    <color name="blanc_casse">#E6EFEC</color>
+    <color name="black">#000000</color>
+    <color name="fond">#06081F</color>
+    <color name="text">#707298</color>
+    <color name="scroll_backg">#161A33</color>
+    <color name="header_backg">#474972</color>
+
+</resources>
