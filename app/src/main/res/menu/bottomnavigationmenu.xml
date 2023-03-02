@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/miPrinc"
+        android:title="@string/bnm_first_item"
+        android:contentDescription="@string/bnm_first_item"
+        android:icon="@drawable/ic_eletrik" />
+
+    <item
+        android:id="@+id/miEcogestes"
+        android:title="@string/bnm_second_item"
+        android:contentDescription="@string/bnm_second_item"
+        android:icon="@drawable/ic_eco_gest" />
+
+    <item
+        android:id="@+id/miPropos"
+        android:contentDescription="@string/bnm_third_item"
+        android:icon="@drawable/ic_info"
+        android:title="@string/bnm_third_item" />
+</menu>
