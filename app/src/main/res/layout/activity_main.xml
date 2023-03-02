@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
@@ -11,7 +12,6 @@
         android:orientation="vertical">
 
         <RelativeLayout
-            android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/header_backg"
@@ -25,7 +25,8 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerVertical="true"
-                android:src="@mipmap/launcher_logo_ecowatt" />
+                android:src="@mipmap/launcher_logo_ecowatt"
+                android:contentDescription="@string/app_name" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab"
@@ -33,17 +34,17 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:contentDescription="More button"
-                android:src="@drawable/ic_add"
-                />
+                android:onClick="refreshData"
+                android:contentDescription="@string/refresh"
+                android:src="@drawable/ic_reload"
+                tools:ignore="RelativeOverlap" />
 
 
         </RelativeLayout>
 
 
         <ScrollView
-            android:id="@+id/main_scroll"
-            android:contentDescription="main_scroll"
+            android:contentDescription="@string/scrolling_view"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -70,7 +71,7 @@
                             android:id="@+id/todayTitle"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/text"
+                            android:textColor="@color/blanc_casse"
                             android:text=""
                             android:textSize="35sp"
                             android:textAlignment="center"/>
@@ -90,7 +91,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_centerInParent="true"
                                 android:layout_height="190sp"
-                                android:src="@drawable/test_for_mon_ecowatt" />
+                                android:src="@drawable/test_for_mon_ecowatt"
+                                android:contentDescription="@string/piechart" />
 
                         </RelativeLayout>
 
@@ -113,7 +115,7 @@
                             android:id="@+id/tommorowTitle"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/text"
+                            android:textColor="@color/blanc_casse"
                             android:text=""
                             android:textSize="35sp"
                             android:textAlignment="center"/>
@@ -134,7 +136,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="190sp"
                                 android:layout_centerInParent="true"
-                                android:src="@drawable/test_for_mon_ecowatt" />
+                                android:src="@drawable/test_for_mon_ecowatt"
+                                android:contentDescription="@string/piechart" />
 
                         </RelativeLayout>
 
@@ -155,7 +158,7 @@
                             android:id="@+id/afterTommorowTitle"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/text"
+                            android:textColor="@color/blanc_casse"
                             android:text=""
                             android:textSize="35sp"
                             android:textAlignment="center"/>
@@ -175,7 +178,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_centerInParent="true"
                                 android:layout_height="190sp"
-                                android:src="@drawable/test_for_mon_ecowatt" />
+                                android:src="@drawable/test_for_mon_ecowatt"
+                                android:contentDescription="@string/piechart" />
 
                         </RelativeLayout>
 

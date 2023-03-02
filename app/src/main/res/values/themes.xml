@@ -1,8 +1,8 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Theme.MonEcoWatt" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/vert_fonce</item>
+        <item name="colorPrimary">@color/vert_clair</item>
         <item name="colorPrimaryVariant">@color/notif</item>
         <item name="colorOnPrimary">@color/blanc_casse</item>
         <!-- Secondary brand color. -->

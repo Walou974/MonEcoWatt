@@ -1,11 +1,8 @@
 <resources>
     <string name="app_name">MonEcoWatt</string>
-    <string name="test">TEST</string>
-    <string name="bienvenu">Bienvenue sur MonEcoWatt !!!</string>
+    <string name="bienvenu">Bienvenue sur MonEcoWatt \nLa météo de l\'électricité en \ntemps réel</string>
     <string name="chargement">Chargement…</string>
     <string name="image_de_d_marrage">Image de démarrage</string>
-    <string name="menu">Menu</string>
-    <string name="contenu_principal">Contenu principal</string>
     <string name="bnm_first_item">Principal</string>
     <string name="bnm_second_item">Les éco-gestes</string>
     <string name="bnm_third_item">A propos</string>
@@ -33,4 +30,14 @@
     <string name="Eco3_3">3) Couvrir les casseroles et les poêles pour raccourcir le temps de cuisson</string>
     <string name="Eco3_4">4) Réduire l\'utilisation de l\'eau chaude</string>
     <string name="Eco3_5">5) Régler la température de production d\'eau chaude (au minimum à 55°C)</string>
+    <string name="start">Start</string>
+    <string name="refresh">Refresh button</string>
+    <string name="scrolling_view">Scrolling view</string>
+    <string name="presentation_a_propos"> Voici la page à propos vous trouverez ici les informations et options relatives à notre application :</string>
+    <string name="projet">But de notre projet:</string>
+    <string name="blabla">Dans le cadre d\'un projet pour notre 2ème année de BUT Réseaux et Télécommunications, nous avons créé une application à l\'aide d\'Android Studio permettant d\'afficher les données du site d\'Ecowatt. Nous avons donc fait au mieux pour rendre l\'expérience utilisateur la plus fluide possible. Bonne visite \!</string>
+    <string name="elec">Image electricité</string>
+    <string name="horloge">Horloge verte</string>
+    <string name="ecoenergie">"image d'eco energie "</string>
+    <string name="piechart">Graphique du risque de panne journalier</string>
 </resources>

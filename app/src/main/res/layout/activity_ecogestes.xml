@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
@@ -11,7 +12,6 @@
         android:orientation="vertical">
 
         <RelativeLayout
-            android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/header_backg"
@@ -25,24 +25,26 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
                 android:src="@mipmap/launcher_logo_ecowatt" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:contentDescription="More button"
-                android:src="@drawable/ic_add" />
+                android:contentDescription="@string/refresh"
+                android:src="@drawable/ic_reload"
+                android:onClick="refreshData"
+                tools:ignore="RelativeOverlap" />
 
 
         </RelativeLayout>
 
 
         <ScrollView
-            android:id="@+id/main_scroll"
-            android:contentDescription="main_scroll"
+            android:contentDescription="@string/scrolling_view"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -57,6 +59,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/blanc_casse"
                     android:layout_marginVertical="10dp">
 
                     <TextView
@@ -66,12 +69,13 @@
                         android:fontFamily="@font/police_bizarre"
                         android:textColor="#191970"
                         android:textAlignment="center"
-                        android:textSize="17dp"
+                        android:textSize="17sp"
                         />
                 </androidx.cardview.widget.CardView>
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
+                    android:contentDescription="@string/elec"
                     android:src="@drawable/energie_rouge"
 
                     />
@@ -79,11 +83,13 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/blanc_casse"
                     android:layout_marginVertical="10dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:paddingHorizontal="20dp"
                         android:orientation="vertical">
                         <TextView
                             android:layout_width="match_parent"
@@ -92,7 +98,7 @@
                             android:fontFamily="@font/police_bizarre"
                             android:textColor="#191970"
                             android:textAlignment="center"
-                            android:textSize="20dp"/>
+                            android:textSize="20sp"/>
 
 
                         <LinearLayout
@@ -185,17 +191,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:src="@drawable/horloge_verte"
-
-                    />
+                    android:contentDescription="@string/horloge" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/blanc_casse"
                     android:layout_marginVertical="10dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:paddingHorizontal="20dp"
                         android:orientation="vertical">
                         <TextView
                             android:layout_width="match_parent"
@@ -204,7 +211,7 @@
                             android:fontFamily="@font/police_bizarre"
                             android:textColor="#191970"
                             android:textAlignment="center"
-                            android:textSize="20dp"/>
+                            android:textSize="20sp"/>
 
 
 
@@ -261,15 +268,17 @@
                     android:layout_height="80dp"
                     android:src="@drawable/eco_energie"
 
-                    />
+                    android:contentDescription="@string/ecoenergie" />
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/blanc_casse"
                     android:layout_marginVertical="10dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:paddingHorizontal="20dp"
                         android:orientation="vertical">
                         <TextView
                             android:layout_width="match_parent"
@@ -278,7 +287,7 @@
                             android:fontFamily="@font/police_bizarre"
                             android:textColor="#191970"
                             android:textAlignment="center"
-                            android:textSize="20dp"/>
+                            android:textSize="20sp"/>
 
 
 
@@ -329,6 +338,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/blanc_casse"
                     android:layout_marginVertical="10dp">
 
 

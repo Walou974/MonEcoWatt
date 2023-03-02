@@ -1,36 +1,57 @@
 package com.example.monecowatt;
 
-import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.TextView;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationBarView;
 
 import org.eazegraph.lib.charts.PieChart;
 import org.eazegraph.lib.models.PieModel;
 
+import java.net.MalformedURLException;
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String SHARED_PREFS = "MySharedPref";
+
     PieChart todayPieChart, tomPieChart, aftTomPieChart;
     TextView todayTitle, tommorowTitle, afterTommorowTitle;
-
+    ArrayList<String> todtab, tomtab, afttomtab;
+    FloatingActionButton refreshButton;
+    final dataHelper dataHelper = new dataHelper();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Bundle extra = getIntent().getExtras();
+        if(extra != null){
+            this.todtab = extra.getStringArrayList("todtab");
+            this.tomtab = extra.getStringArrayList("tomtab");
+            this.afttomtab = extra.getStringArrayList("afttomtab");
+            this.dataHelper.savedata(this, todtab, tomtab, afttomtab);
+        }else {
+            this.todtab = new ArrayList<>();
+            this.tomtab = new ArrayList<>();
+            this.afttomtab = new ArrayList<>();
+            loadData();
+
+        }
 
         todayPieChart = findViewById(R.id.todayPiechart);
         tomPieChart = findViewById(R.id.tommorowPiechart);
@@ -39,12 +60,16 @@ public class MainActivity extends AppCompatActivity {
         tommorowTitle = findViewById(R.id.tommorowTitle);
         afterTommorowTitle = findViewById(R.id.afterTommorowTitle);
         BottomNavigationView bottomNav = findViewById(R.id.bnmView);
-        bottomNav.setOnItemReselectedListener(navListener);
-        Log.d(TAG, "onResume: changed layout ");
+        bottomNav.setOnItemSelectedListener(navListener);
+        bottomNav.setSelectedItemId(R.id.miPrinc);
+        refreshButton = findViewById(R.id.fab);
+
         setData();
 
     }
-    private final NavigationBarView.OnItemReselectedListener navListener = item -> {
+
+    @SuppressLint("NonConstantResourceId")
+    private final NavigationBarView.OnItemSelectedListener navListener = item -> {
         // By using switch we can easily get
         // the selected id
         // by using there id.
@@ -53,22 +78,18 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.miEcogestes:
-                Log.d(TAG, "change layout : test");
                 Intent j = new Intent(this, Ecogestes.class);
                 startActivity(j);
                 break;
             case R.id.miPropos:
-                Log.d(TAG, "change layout : Propos");
                 Intent k = new Intent(this, Propos.class);
                 startActivity(k);
                 break;
 
         }
+        return false;
     };
 
-    private int setColor(){
-        return ContextCompat.getColor(this, R.color.notif);
-    }
 
     private int setColor(int entry){
         int red = ContextCompat.getColor(this, R.color.rouge_al);
@@ -115,20 +136,49 @@ public class MainActivity extends AppCompatActivity {
         // set slice size to 100% / nb of parts
         int partSize = 100/24;
 
-        // set array color
-        //TODO: change to array from server
-        int[] todtab = {2, 1, 2, 1, 3, 3, 3, 3, 1, 2, 1, 2, 2, 2, 1, 1, 1, 3, 2, 3, 3, 3, 1, 2};
-        int[] tomtab = {3, 3, 3, 1, 2, 1, 1, 3, 3, 1, 2, 1, 2, 2, 1, 2, 1, 2, 3, 1, 2, 3, 3, 2};
-        int[] afttomtab = {1, 3, 1, 1, 1, 3, 3, 2, 1, 1, 2, 2, 3, 3, 1, 1, 3, 2, 3, 2, 3, 2, 2, 2};
 
         // Add pieChart slice
         for (int i = 0; i < 24; i++){
-            todayPieChart.addPieSlice(new PieModel(partSize,setColor(todtab[i])));
-            tomPieChart.addPieSlice(new PieModel(partSize,setColor(tomtab[i])));
-            aftTomPieChart.addPieSlice(new PieModel(partSize,setColor(afttomtab[i])));
+            todayPieChart.addPieSlice(new PieModel(partSize,setColor(Integer.parseInt(todtab.get(i)))));
+            tomPieChart.addPieSlice(new PieModel(partSize,setColor(Integer.parseInt(tomtab.get(i)))));
+            aftTomPieChart.addPieSlice(new PieModel(partSize,setColor(Integer.parseInt(afttomtab.get(i)))));
         }
         todayPieChart.startAnimation();
         tomPieChart.startAnimation();
         aftTomPieChart.startAnimation();
     }
-}
+    public void refreshData(View view) throws MalformedURLException {
+        dataHelper.refreshData(this);
+        Toast.makeText(this, "Refreshing data ...",Toast.LENGTH_SHORT).show();
+    }
+
+    public void loadData() {
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        String tmplist = sharedPreferences.getString("todtab", "");
+        for (int i = 0; i < tmplist.length(); i++) {
+            String tmp = Character.toString(tmplist.charAt(i));
+            if (!tmp.equals("[") && !tmp.equals(",") && !tmp.equals(" ") && !tmp.equals("]")) {
+                this.todtab.add(tmp);
+            }
+        }
+
+        String tmplist2 = sharedPreferences.getString("tomtab", "");
+        for (int i = 0; i < tmplist2.length(); i++) {
+            String tmp = Character.toString(tmplist2.charAt(i));
+            if (!tmp.equals("[") && !tmp.equals(",") && !tmp.equals(" ") && !tmp.equals("]")) {
+                this.tomtab.add(tmp);
+            }
+
+        }
+
+        String tmplist3 = sharedPreferences.getString("afttomtab", "");
+        for (int i = 0; i < tmplist3.length(); i++) {
+            String tmp = Character.toString(tmplist3.charAt(i));
+            if (!tmp.equals("[") && !tmp.equals(",") && !tmp.equals(" ") && !tmp.equals("]")) {
+                this.afttomtab.add(tmp);
+            }
+
+        }
+    }
+ }
+
