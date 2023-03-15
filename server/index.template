@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Dernières données</h1>
+<h3>Aujourd'hui<h3>
+<pre>
+#_TODAY
+</pre>
+<h3>À venir<h3>
+<pre>
+#_TOMORROW
+</pre>
+</body>
+</html>
